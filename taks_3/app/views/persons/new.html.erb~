@@ -1,0 +1,16 @@
+<h1>Persons#new</h1>
+<%= form_for @person, :url => {action: "create" } do |f| %>
+  <%= f.label :houseid %>
+    <%= f.text_field :houseid %>
+<br/>
+  <%= f.label :name%>
+    <%= f.text_field :name %>
+<br/>
+  <%= f.label :noktp %>
+    <%= f.text_field :noktp %>
+<br/>
+  <%= f.label :birthdate %>
+    <%= f.text_field :birthdate %>
+<br/>
+<%= f.submit :submit %>
+<% end %>

@@ -1,0 +1,46 @@
+<link href="assets/stylesheets/bootstrap.min.css">
+<script src="assets/javascipts/bootstrap.min.js"></script>
+<div class="navbar navbar-inverse">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Residents</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-inverse-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="/houses/">Rumah</a></li>
+      <li><a href="/persons/">Orang</a></li>
+    </ul>
+  </div>
+</div>
+<h1>Houses#edit</h1>
+<%= form_for @house, html:{class:"form-horizontal"} do |f| %>
+<fieldset>
+<legend>Form House</legend>
+<div class="form-group">
+  <%= f.label :houseno, class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :houseno, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<div class="form-group">
+  <%= f.label :tipe,class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :tipe, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<div class="form-group">
+  <%= f.label :address,class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :address, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<%= f.submit :submit, class:"btn btn-primary" %>
+</fieldset>
+<% end %>

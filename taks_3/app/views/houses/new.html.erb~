@@ -1,0 +1,32 @@
+<link href="assets/stylesheets/bootstrap.min.css">
+<script src="assets/javascipts/bootstrap.min.js"></script>
+<link href="assets/stylesheets/bootstrap.min.css">
+<script src="assets/javascipts/bootstrap.min.js"></script>
+<h1>House#new</h1>
+<%= form_for @house, html:{class:"form-horizontal"} do |f| %>
+<fieldset>
+<legend>Form House</legend>
+<div class="form-group">
+  <%= f.label :houseno, class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :houseno, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<div class="form-group">
+  <%= f.label :tipe,class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :tipe, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<div class="form-group">
+  <%= f.label :address,class: "col-lg-1 control-label" %>
+  <div class="col-lg-4">
+    <%= f.text_field :address, class:"form-control" %>
+  </div>
+</div>
+<br/>
+<%= f.submit :submit, class:"btn btn-primary" %>
+</fieldset>
+<% end %>
